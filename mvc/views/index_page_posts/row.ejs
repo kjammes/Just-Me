@@ -1,0 +1,28 @@
+<%# Standarad Posts
+  <div class="col-md-4 d-flex">
+    POST
+  </div>
+%>
+
+<%# Horizontal Posts
+  <div class="col-md-8 d-flex">
+    <div class="row">
+      <div class="col-md-12">
+        POST
+      </div>
+      <div class="col-md-12">
+        POST
+      </div>
+    </div>
+  </div>
+%>
+
+<% console.log("This is working and I don't know how"); %>
+
+<% for(let i=0 ; i<posts.length ; i++){ %>
+  <% console.log("This is working and I don't know how") %>
+  <div class="col-md-4 d-flex">
+    <%- include('post.ejs',{ post:posts[i] , post_meta:posts_meta[i] }); %>
+  </div>
+
+<% } %>
